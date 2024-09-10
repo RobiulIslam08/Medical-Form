@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Form with PDF Download</title>
+  
+  <!-- Updated HTML2PDF.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      var form = document.getElementById('form-to-download');
+      var button = document.getElementById('download-btn');
+
+      // Hide the button before generating PDF
+      button.style.display = 'none';
+
+      // Options for A4-size high-resolution PDF
+      var opt = {
+        margin:       0.5,
+        filename:     'MEDICAL.pdf',
+        image:        { type: 'jpeg', quality: 1 },
+        html2canvas:  { scale: 10, dpi: 800, letterRendering: true }, // Higher scale for better quality
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      // Generate the PDF
+      html2pdf().set(opt).from(form).save().then(function() {
+        // Show the button again after the PDF is generated
+        button.style.display = 'block';
+      });
+    }
+  </script>
+  
+  <!-- Add Arial font family -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div id="form-to-download" class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+
+    <img src="./images/logo.png" alt="Logo">
+    
+    <form>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" id="name" type="text" placeholder="Enter your name">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" id="email" type="email" placeholder="Enter your email">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" id="password" type="password" placeholder="Enter your password">
+      </div>
+    </form>
+
+    <!-- Download PDF Button -->
+    <button id="download-btn" onclick="downloadPDF()" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none">
+      Download PDF
+    </button>
+  </div>
+</body>
+</html>
