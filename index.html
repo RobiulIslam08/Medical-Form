@@ -1,75 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind CSS Form with PDF Download</title>
-  
-  <!-- Updated HTML2PDF.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script>
-    function downloadPDF() {
-      var form = document.getElementById('form-to-download');
-      var button = document.getElementById('download-btn');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Check-Up Certificate</title>
 
-      // Hide the button before generating PDF
-      button.style.display = 'none';
+    <!-- Updated HTML2PDF.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+      function downloadPDF() {
+        var form = document.getElementById("form-to-download");
+        var button = document.getElementById("download-btn");
 
-      // Options for A4-size high-resolution PDF
-      var opt = {
-        margin:       0.5,
-        filename:     'MEDICAL.pdf',
-        image:        { type: 'jpeg', quality: 1 },
-        html2canvas:  { scale: 10, dpi: 800, letterRendering: true }, // Higher scale for better quality
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
+        // Hide the button before generating PDF
+        button.style.display = "none";
 
-      // Generate the PDF
-      html2pdf().set(opt).from(form).save().then(function() {
-        // Show the button again after the PDF is generated
-        button.style.display = 'block';
-      });
-    }
-  </script>
-  
-  <!-- Add Arial font family -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+        // Options for A4-size high-resolution PDF
+        var opt = {
+          margin: 0.5,
+          filename: "MEDICAL.pdf",
+          image: { type: "jpeg", quality: 1 },
+          html2canvas: { scale: 2, dpi: 300, letterRendering: true },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        };
 
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
+        // Generate the PDF
+        html2pdf()
+          .set(opt)
+          .from(form)
+          .save()
+          .then(function () {
+            // Show the button again after the PDF is generated
+            button.style.display = "block";
+          });
+      }
+    </script>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen flex items-center justify-center bg-gray-100">
-  <div id="form-to-download" class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Arial&display=swap");
 
-    <img src="./images/logo.png" alt="Logo">
-    
-    <form>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
-        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" id="name" type="text" placeholder="Enter your name">
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+      }
+    </style>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div
+      id="form-to-download"
+      class="bg-white pt-7 px-24 pb-10 rounded-lg shadow-md max-w-[210mm] w-full"
+      style="min-height: 297mm;" 
+    >
+      <!-- logo -->
+      <div class="flex justify-center items-center w-full mb-10">
+        <img src="./images/logo.png" class="w-full h-24" alt="Logo" />
       </div>
 
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" id="email" type="email" placeholder="Enter your email">
+      <!-- heading -->
+      <div class="flex justify-between items-center px-5">
+        <h1 class="underline font-semibold text-[20px]">
+          MEDICAL CHECK UP SUMMARY / CERTIFICATE
+        </h1>
+        <img src="./images/qr-scan.png" alt="QR Code" />
       </div>
 
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
-        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500" id="password" type="password" placeholder="Enter your password">
-      </div>
-    </form>
+      <!-- Form Fields -->
+      <form class="py-10">
+        <!-- 1st Row -->
+        <div class="flex gap-1">
+          <!-- "To" field -->
+          <div class="flex flex-1 items-center">
+            <label for="to" class="pr-10 uppercase text-gray-600 text-xs font-medium">To</label>
+            <input class="border border-gray-400 h-5 w-full outline-none" type="text" name="to" id="to" />
+          </div>
+          
+          <!-- "Date" field -->
+          <div class="flex items-center w-[40%]">
+            <label for="date" class="pr-8 uppercase text-gray-600 text-xs font-medium">Date</label>
+            <input class="border h-5 w-full border-gray-400 outline-none" type="text" name="date" id="date" />
+          </div>
+        </div>
 
-    <!-- Download PDF Button -->
-    <button id="download-btn" onclick="downloadPDF()" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none">
-      Download PDF
-    </button>
-  </div>
-</body>
+        <!-- 2nd Row -->
+        <div class="flex gap-1 mt-4">
+          <!-- "File number" -->
+          <div class="flex items-center pr-6 gap-1 ">
+            <label for="file-number" class="uppercase text-gray-600 text-xs font-medium">File number</label>
+            <input class="border border-gray-400 h-5 w-[90px] outline-none" type="text" name="file-number" id="file-number" />
+          </div>
+          
+          <!-- "Category" -->
+          <div class="flex items-center  gap-1">
+            <label for="category" class="text-xs uppercase text-gray-600 font-medium ">Category</label>
+            <input class="border h-5 border-gray-400 outline-none  w-[90px]" type="text" name="category" id="category" />
+          </div>
+
+          <!-- "Blood group" -->
+          <div class="flex items-center gap-[64px]  ">
+            <label for="blood-group" class=" uppercase text-xs text-gray-600 font-medium">Blood group</label>
+            <input class="border h-5 flex  border-gray-400 outline-none w-[80px] " type="text" name="blood-group" id="blood-group" />
+          </div>
+        </div>
+
+        <!-- personal details -->
+        <div>
+          <div>
+            <label class="text-xs uppercase text-gray-600 font-medium" for="">Name</label>
+            <input type="text" class="w-full border outline-none border-gray-400 h-5">
+           </div>
+        </div>
+      </form>
+
+      <!-- Download PDF Button -->
+      <button
+        id="download-btn"
+        onclick="downloadPDF()"
+        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none mt-6"
+      >
+        Download PDF
+      </button>
+    </div>
+  </body>
 </html>
