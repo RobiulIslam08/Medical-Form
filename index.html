@@ -52,7 +52,7 @@
     <div
       id="form-to-download"
       class="bg-white pt-7 px-24 pb-10 rounded-lg shadow-md max-w-[210mm] w-full"
-      style="min-height: 297mm;" 
+      style="min-height: 297mm"
     >
       <!-- logo -->
       <div class="flex justify-center items-center w-full mb-10">
@@ -73,44 +73,415 @@
         <div class="flex gap-1">
           <!-- "To" field -->
           <div class="flex flex-1 items-center">
-            <label for="to" class="pr-10 uppercase text-gray-600 text-xs font-medium">To</label>
-            <input class="border border-gray-400 h-5 w-full outline-none" type="text" name="to" id="to" />
+            <label
+              for="to"
+              class="pr-10 uppercase text-gray-600 text-xs font-medium"
+              >To</label
+            >
+            <input
+              class="border border-gray-400 h-5 w-full outline-none"
+              type="text"
+              name="to"
+              id="to"
+            />
           </div>
-          
+
           <!-- "Date" field -->
           <div class="flex items-center w-[40%]">
-            <label for="date" class="pr-8 uppercase text-gray-600 text-xs font-medium">Date</label>
-            <input class="border h-5 w-full border-gray-400 outline-none" type="text" name="date" id="date" />
+            <label
+              for="date"
+              class="pr-8 uppercase text-gray-600 text-xs font-medium"
+              >Date</label
+            >
+            <input
+              class="border h-5 w-full border-gray-400 outline-none"
+              type="text"
+              name="date"
+              id="date"
+            />
           </div>
         </div>
 
         <!-- 2nd Row -->
-        <div class="flex gap-1 mt-4">
+        <div class="flex gap-1 mt-2">
           <!-- "File number" -->
-          <div class="flex items-center pr-6 gap-1 ">
-            <label for="file-number" class="uppercase text-gray-600 text-xs font-medium">File number</label>
-            <input class="border border-gray-400 h-5 w-[90px] outline-none" type="text" name="file-number" id="file-number" />
+          <div class="flex items-center pr-6 gap-1">
+            <label
+              for="file-number"
+              class="uppercase text-gray-600 text-xs font-medium"
+              >File number</label
+            >
+            <input
+              class="border border-gray-400 h-5 w-[90px] outline-none"
+              type="text"
+              name="file-number"
+              id="file-number"
+            />
           </div>
-          
+
           <!-- "Category" -->
-          <div class="flex items-center  gap-1">
-            <label for="category" class="text-xs uppercase text-gray-600 font-medium ">Category</label>
-            <input class="border h-5 border-gray-400 outline-none  w-[90px]" type="text" name="category" id="category" />
+          <div class="flex items-center gap-1">
+            <label
+              for="category"
+              class="text-xs uppercase text-gray-600 font-medium"
+              >Category</label
+            >
+            <input
+              class="border h-5 border-gray-400 outline-none w-[90px]"
+              type="text"
+              name="category"
+              id="category"
+            />
           </div>
 
           <!-- "Blood group" -->
-          <div class="flex items-center gap-[64px]  ">
-            <label for="blood-group" class=" uppercase text-xs text-gray-600 font-medium">Blood group</label>
-            <input class="border h-5 flex  border-gray-400 outline-none w-[80px] " type="text" name="blood-group" id="blood-group" />
+          <div class="flex items-center gap-[64px]">
+            <label
+              for="blood-group"
+              class="uppercase text-xs text-gray-600 font-medium"
+              >Blood group</label
+            >
+            <input
+              class="border h-5 flex border-gray-400 outline-none w-[80px]"
+              type="text"
+              name="blood-group"
+              id="blood-group"
+            />
           </div>
         </div>
 
         <!-- personal details -->
         <div>
+          <h1 class="text-lg text-gray-800 uppercase underline mt-2">
+            Personal Details
+          </h1>
+          <!--first field name -->
+          <div class="flex items-center gap-16">
+            <label class="text-xs uppercase text-gray-600 font-medium" for=""
+              >Name</label
+            >
+            <input
+              type="text"
+              class="w-full border outline-none border-gray-400 h-5"
+            />
+          </div>
+
+          <!-- second field for personal information -->
           <div>
-            <label class="text-xs uppercase text-gray-600 font-medium" for="">Name</label>
-            <input type="text" class="w-full border outline-none border-gray-400 h-5">
+            <div class="flex gap-1 mt-1">
+              <!-- "Nationality" -->
+              <div class="flex items-center gap-7">
+                <label
+                  for="file-number"
+                  class="uppercase text-gray-600 text-xs font-medium"
+                  >Nationality</label
+                >
+                <input
+                  class="border border-gray-400 h-5 w-[130px] outline-none"
+                  type="text"
+                  name="file-number"
+                  id="file-number"
+                />
+              </div>
+
+              <!-- "age" -->
+              <div class="flex items-center gap-12">
+                <label
+                  for="category"
+                  class="text-xs uppercase text-gray-600 font-medium"
+                  >Age</label
+                >
+                <input
+                  class="border h-5 border-gray-400 outline-none w-[147px]"
+                  type="text"
+                  name="category"
+                  id="category"
+                />
+              </div>
+
+              <!-- "sex group" -->
+              <div class="flex items-center gap-[38px]">
+                <label
+                  for="blood-group"
+                  class="uppercase text-xs text-gray-600 font-medium"
+                  >Sex</label
+                >
+                <input
+                  class="border h-5 flex border-gray-400 outline-none w-[80px]"
+                  type="text"
+                  name="blood-group"
+                  id="blood-group"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- third field for personal information -->
+          <div>
+            <div class="flex gap-1 mt-1">
+              <!-- "passport no" -->
+              <div class="flex flex-1 items-center gap-10">
+                <label
+                  for="file-number"
+                  class="uppercase text-gray-600 text-xs font-medium"
+                  >passport no/iqama</label
+                >
+                <input
+                  class="border border-gray-400 h-5 w-[205px] outline-none"
+                  type="text"
+                  name="file-number"
+                  id="file-number"
+                />
+              </div>
+
+              <!-- "date of birth" -->
+              <div class="flex items-center gap-12">
+                <label
+                  for="category"
+                  class="text-xs uppercase text-gray-600 font-medium"
+                  >Date Of birth</label
+                >
+                <input
+                  class="border h-5 border-gray-400 outline-none w-[90px]"
+                  type="text"
+                  name="category"
+                  id="category"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- employment details -->
+          <div>
+            <h1 class="text-lg text-gray-800 uppercase underline mt-2">
+              employment Details
+            </h1>
+            <!--sponsor company -->
+            <div class="flex items-center gap-14">
+              <label
+                class="text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                for=""
+                >Sponsor / company</label
+              >
+              <input
+                type="text"
+                class="w-full border outline-none border-gray-400 h-5"
+              />
+            </div>
+
+            <!-- job description , city -->
+            <div>
+              <div class="flex gap-1 mt-1">
+                <!-- "job description city" -->
+                <div class="flex items-center gap-24">
+                  <label
+                    for="file-number"
+                    class="uppercase text-gray-600 text-xs font-medium"
+                    >Job Description</label
+                  >
+                  <input
+                    class="border border-gray-400 h-5 w-[205px] outline-none"
+                    type="text"
+                    name="file-number"
+                    id="file-number"
+                  />
+                </div>
+
+                <!-- "city" -->
+                <div class="flex items-center gap-12">
+                  <label
+                    for="category"
+                    class="text-xs uppercase text-gray-600 font-medium"
+                    >city</label
+                  >
+                  <input
+                    class="border h-5 border-gray-400 outline-none w-[112px]"
+                    type="text"
+                    name="category"
+                    id="category"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- medical examination -->
+           <div>
+            <h1 class="text-lg text-gray-800 uppercase underline mt-2">
+             Medical examination
+            </h1>
+
+            <!-- height , weight-->
+             <div class="flex gap-10 items-center">
+
+              <!-- height -->
+              <div>
+                <div class="flex items-center gap-14">
+                  <label
+                    class="text-xs uppercase text-gray-600 pr-10 font-medium whitespace-nowrap"
+                    for=""
+                    >height</label
+                  >
+                  <input
+                    type="text"
+                    class="w-[80px] border outline-none border-gray-400 h-5"
+                  />
+                </div>
+              </div>
+
+              <!-- weight -->
+              <div>
+                <div class="flex gap-1 items-center ">
+                  <label
+                    class="text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                    for=""
+                    >weight</label
+                  >
+                  <input
+                    type="text"
+                    class="w-[130px] border outline-none border-gray-400 h-5"
+                  />
+                </div>
+              </div>
+             </div>
+
+             <!-- pulse, bp , temp -->
+             <div class="flex  mt-1  items-center ">
+
+              <!-- pulse -->
+              <div class="pr-[73px]">
+                <div class="flex items-center gap-[60px]">
+                  <label
+                    class="text-xs uppercase pr-10 text-gray-600 font-medium whitespace-nowrap"
+                    for=""
+                    >pulse</label
+                  >
+                  <input
+                    type="text"
+                    class="w-[80px] border outline-none border-gray-400 h-5"
+                  />
+                </div>
+              </div>
+
+              <!-- bp -->
+              <div class="pr-[33px]">
+                <div class="flex gap-1 items-center ">
+                  <label
+                    class="text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                    for=""
+                    >bp</label
+                  >
+                  <input
+                    type="text"
+                    class="w-[130px] border outline-none border-gray-400 h-5"
+                  />
+                </div>
+              </div>
+              <!-- temp -->
+              <div>
+                <div class="flex items-center gap-1 ">
+                  <label
+                    class="text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                    for=""
+                    >temp</label
+                  >
+                  <input
+                    type="text"
+                    class="w-[88px] border outline-none border-gray-400 h-5"
+                  />
+                </div>
+              </div>
+             </div>
+
+             <!-- lungs and chest -->
+                
+            <div class="flex items-center mt-1">
+              <label
+                class="pr-[43px] text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                for=""
+                >Lungs & chest</label
+              >
+              <input
+                type="text"
+                class="w-full border outline-none border-gray-400 h-5"
+              />
+            </div>
+
+            <!-- cardio vascular -->
+               
+            <div class="flex items-center mt-1">
+              <label
+                class="pr-[27px] text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                for=""
+                >curdio vascular</label
+              >
+              <input
+                type="text"
+                class="w-full border outline-none border-gray-400 h-5"
+              />
+            </div>
+
+            <!-- neurological -->
+              
+            <div class="flex items-center mt-1">
+              <label
+                class="pr-[45px] text-xs uppercase text-gray-600 font-medium whitespace-nowrap"
+                for=""
+                >neurological</label
+              >
+              <input
+                type="text"
+                class="w-full border outline-none border-gray-400 h-5"
+              />
+            </div>
            </div>
+
+           <!-- vision -->
+            <div class="flex gap-40 mt-2">
+              <p class="text-xs uppercase text-gray-600 pr-10 font-medium">vision</p>
+              <p class="text-xs uppercase text-gray-600 pr-10 font-medium">N6 = normal</p>
+            </div>
+
+            <div class="">
+              <!-- near -->
+                <div class="flex pl-20 mt-1">
+                    <p class="text-xs uppercase text-gray-600 pr-8 font-medium">Near</p>
+                   <div class="flex gap-1 pr-[23px]">
+                    <p class="text-xs uppercase text-gray-600  font-medium">left</p>
+                    <input class="border outline-none border-gray-400 h-5" type="text" name="" id="">
+                   </div>
+                   <div class="flex gap-1">
+                    <p class="text-xs uppercase text-gray-600  font-medium">right</p>
+                    <input class="border outline-none border-gray-400 h-5" type="text" name="" id="">
+                   </div>
+                </div>
+              <!-- ear -->
+                <div class="flex pl-20 mt-1 mb-10">
+                    <p class="text-xs uppercase text-gray-600 pr-8 font-medium pl-2">ear</p>
+                   <div class="flex gap-1 pr-[23px]">
+                    <p class="text-xs uppercase text-gray-600  font-medium">left</p>
+                    <input class="border outline-none border-gray-400 h-5" type="text" name="" id="">
+                   </div>
+                   <div class="flex gap-1">
+                    <p class="text-xs uppercase text-gray-600  font-medium">right</p>
+                    <input class="border outline-none border-gray-400 h-5" type="text" name="" id="">
+                   </div>
+                </div>
+
+                <!-- just left right -->
+                <div class="flex pl-[142px] mt-1">
+                  
+                 <div class="flex gap-1 pr-[23px]">
+                  <p class="text-xs uppercase text-gray-600  font-medium">left</p>
+                  <input class="border outline-none border-gray-400 h-5" type="text" name="" id="">
+                 </div>
+                 <div class="flex gap-1">
+                  <p class="text-xs uppercase text-gray-600  font-medium">right</p>
+                  <input class="border outline-none border-gray-400 h-5" type="text" name="" id="">
+                 </div>
+              </div>
+            </div>
+
         </div>
       </form>
 
