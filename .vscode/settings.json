@@ -1,0 +1,5 @@
+{
+	"github.gitAuthentication": true,
+	"terminal.integrated.shellIntegration.enabled": true,
+	"liveServer.settings.port": 5501
+}

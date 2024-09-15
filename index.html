@@ -20,7 +20,7 @@
           margin: 0.2,
           filename: "MEDICAL.pdf",
           image: { type: "jpeg", quality: 1 },
-          html2canvas: { scale: 10, dpi: 800, letterRendering: true },
+          html2canvas: { scale: 3, dpi: 300, letterRendering: true },
           jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
         };
 
@@ -41,48 +41,56 @@
 
       body {
         font-family: Arial, sans-serif;
-        background-color: #f3f4f6;
-      }
+        background-color: #f3f4f6;black
+      .no-gap-underline {
+      display: inline; /* Ensure underline only spans text */
+      border-bottom: 1px solid currentColor; /* Use current color for underline */
+      padding-bottom: 0; /* Remove any padding below the text */
+      line-height: 1  ; /* Remove extra space below the text */
+    }
     </style>
+    
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="min-h-screen flex items-center justify-center  bg-gray-100">
     <div   id="form-to-download"
-    class="bg-white pt-7   rounded-lg shadow-md max-w-[210mm] w-full"
+    class="bg-[#ffffff] pt-5   rounded-lg shadow-md max-w-[210mm] w-full"
     style="min-height: 297mm">
       <div
       class=""
       
       >
         <!-- logo -->
-        <div class="flex justify-center items-center w-full mb-10">
-          <img src="./images/logo.png" class="w-full h-16 " alt="Logo" />
+        <div class="flex justify-center items-center w-full  px-20 ">
+          <img src="./images/logo.png" class="w-full h-20 " alt="Logo" />
         </div>
 <!-- for background -->
  <div class="mx-9 bg-[url('./images/bg.png')]">
        <!-- heading -->
-       <div class="flex justify-between items-center   px-[60px]">
-        <h1 class="underline font-semibold text-[20px]">
+       <div class="flex justify-between items-center  pt-[50px] px-[84px]">
+        <h1 class=" border-b-[1px]  border-gray-800 font-semibold text-[20px] mb-0 pb-0 leading-none ">
           MEDICAL CHECK UP SUMMARY / CERTIFICATE
+       
         </h1>
+      
         <img src="./images/qr-scan.png" alt="QR Code" />
       </div>
   
       <!-- Form Fields -->
-      <form class="pt-2  px-[60px]">
+      <form class="pt-2  px-[70px]">
         <!-- 1st Row -->
         <div class="flex gap-1">
           <!-- "To" field -->
           <div class="flex flex-1 items-center">
             <label
               for="to"
-              class="pr-10 uppercase text-gray-600 text-xs font-semibold"
+              class="pr-16 uppercase text-black text-xs font-semibold"
               >To</label
             >
             <input
-              class="border border-gray-400 text-gray-600 px-[2px] text-xs h-5 w-full outline-none font-semibold"
+              class="border border-black bg-transparent  text-black px-[2px] text-xs h-5 w-full outline-none font-semibold"
               type="text"
               name="to"
               id="to"
@@ -93,14 +101,15 @@
           <div class="flex items-center w-[40%]">
             <label
               for="date"
-              class="pr-8 uppercase text-gray-600 text-xs font-semibold"
+              class="pr-8 uppercase text-black text-xs font-semibold"
               >Date</label
             >
             <input
-              class="border h-5 w-full px-[2px] text-gray-600 text-xs border-gray-400 outline-none font-semibold"
+              class="border h-5 w-full bg-transparent px-[2px] text-black text-xs border-black outline-none font-semibold"
               type="text"
               name="date"
               id="date"
+              value="09/09/2024  04:30  PM"
             />
           </div>
         </div>
@@ -111,14 +120,15 @@
           <div class="flex items-center pr-6 gap-1">
             <label
               for="file-number"
-              class="uppercase text-gray-600 text-xs font-semibold"
+              class="uppercase text-black text-xs font-semibold text-nowrap"
               >File number</label
             >
             <input
-              class="text-gray-600 px-[2px] text-xs border border-gray-400 h-5 w-[90px] outline-none font-semibold"
+              class="text-black px-[2px] text-xs bg-transparent border border-black h-5 w-[90px] outline-none font-semibold"
               type="text"
               name="file-number"
               id="file-number"
+              value="13875255"
             />
           </div>
   
@@ -126,129 +136,137 @@
           <div class="flex items-center gap-1">
             <label
               for="category"
-              class="text-xs uppercase text-gray-600 font-semibold"
+              class="text-xs uppercase text-black font-semibold"
               >Category</label
             >
             <input
-              class="text-gray-600 px-[2px] text-xs border h-5 border-gray-400 outline-none w-[90px] font-semibold"
+              class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[85px] font-semibold"
               type="text"
               name="category"
               id="category"
+              value="NEW"
             />
           </div>
   
           <!-- "Blood group" -->
-          <div class="flex items-center gap-[78px]">
+          <div class="flex items-center gap-[65px]">
             <label
               for="blood-group"
-              class="uppercase text-xs text-gray-600 font-semibold"
+              class="uppercase text-xs text-black font-semibold text-nowrap"
               >Blood group</label
             >
             <input
-              class="text-gray-600 px-[2px] text-xs border h-5 flex border-gray-400 outline-none w-[80px] font-semibold"
+              class="text-black bg-transparent px-[2px] text-xs border h-5 flex border-black outline-none w-[80px] font-semibold"
               type="text"
-              name="blood-group"
+              name="blblack
               id="blood-group"
+              value="A+VE"
             />
           </div>
         </div>
   
         <!-- personal details -->
         <div>
-          <h1 class="text-lg text-gray-800 uppercase underline mt-2">
+          <h1 class="text-[15px] font-bold text-black uppercase mb-2  mt-3 border-b-[1px]  border-black leading-none w-[150px]">
             Personal Details
           </h1>
           <!--first field name -->
-          <div class="flex items-center gap-16 mt-[1px]">
-            <label class="text-xs uppercase text-gray-600 font-semibold" for=""
+          <div class="flex items-center gap-[69px] ">
+            <label class="text-xs uppercase text-black font-semibold" for=""
               >Name</label
             >
             <input
+            value="MD NURALAMIN"
               type="text"
-              class="text-gray-600 px-[2px] text-xs w-full border outline-none border-gray-400 h-5 font-semibold"
+              class="text-black px-[2px] bg-transparent text-xs w-full border outline-none border-black h-5 font-semibold"
             />
           </div>
   
-          <!-- second field for personal information -->
+          <!-- second field for personal information nationality, age, sex -->
           <div>
             <div class="flex gap-1 mt-[1px]">
               <!-- "Nationality" -->
               <div class="flex items-center gap-7">
                 <label
                   for="file-number"
-                  class="uppercase text-gray-600 text-xs font-semibold"
+                  class="uppercase text-black text-xs font-semibold"
                   >Nationality</label
                 >
                 <input
-                  class="text-gray-600 px-[2px] text-xs border border-gray-400 h-5 w-[130px] outline-none font-semibold"
+                  class="text-black px-[2px] bg-transparent text-xs border border-black h-5 w-[110px] outline-none font-semibold"
                   type="text"
                   name="file-number"
                   id="file-number"
+                  value="Bangladesh"
                 />
               </div>
   
               <!-- "age" -->
-              <div class="flex items-center gap-12">
+              <div class="flex items-center gap-[78px]">
                 <label
                   for="category"
-                  class="text-xs uppercase text-gray-600 font-semibold"
+                  class="text-xs uppercase text-black font-semibold"
                   >Age</label
                 >
                 <input
-                  class="text-gray-600 px-[2px] text-xs border h-5 border-gray-400 outline-none w-[147px] font-semibold"
+                  class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[137px] font-semibold"
                   type="text"
                   name="category"
                   id="category"
+                  value="25 YRS"
                 />
               </div>
   
               <!-- "sex group" -->
-              <div class="flex items-center gap-[40px]">
+              <div class="flex items-center gap-[30px]">
                 <label
                   for="blood-group"
-                  class="uppercase text-xs text-gray-600 font-semibold"
+                  class="uppercase text-xs text-black font-semibold"
                   >Sex</label
                 >
                 <input
-                  class="text-gray-600 px-[2px] text-xs border h-5 flex border-gray-400 outline-none w-[80px] font-semibold"
+                  class="text-black bg-transparent px-[2px] text-xs border h-5 flex border-black outline-none w-[70px] font-semibold"
                   type="text"
                   name="blood-group"
                   id="blood-group"
+                  value="M"
                 />
               </div>
             </div>
           </div>
   
-          <!-- third field for personal information -->
+          <!-- third field for personal information passport, date of birth-->
           <div>
             <div class="flex gap-1 mt-[1px]">
               <!-- "passport no" -->
-              <div class="flex flex-1 items-center gap-10">
+              <div class="flex  items-center gap-[88px]">
                 <label
                   for="file-number"
-                  class="uppercase text-gray-600 text-xs font-semibold"
+                  class="uppercase text-black text-xs text-nowrap font-semibold"
                   >passport no/iqama</label
                 >
                 <input
-                  class="text-gray-600 px-[2px] text-xs border border-gray-400 h-5 w-[205px] outline-none font-semibold"
+                  class="text-black px-[2px] bg-transparent text-xs border border-black h-5 w-[105px] outline-none font-semibold"
                   type="text"
                   name="file-number"
                   id="file-number"
+                  value="250989924"
                 />
               </div>
   
               <!-- "date of birth" -->
-              <div class="flex items-center gap-12">
+              <div class="flex items-center gap-[50px]">
                 <label
                   for="category"
-                  class="text-xs uppercase text-gray-600 font-semibold"
+                  class="text-xs uppercase text-black font-semibold text-nowrap"
                   >Date Of birth</label
                 >
                 <input
-                  class="text-gray-600 px-[2px] text-xs border h-5 border-gray-400 outline-none w-[90px] font-semibold"
+                  class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[125px] font-semibold"
                   type="text"
                   name="category"
                   id="category"
+                  value="07/11/1999"
                 />
               </div>
             </div>
@@ -256,34 +274,35 @@
   
           <!-- employment details -->
           <div class="">
-            <h1 class="text-lg text-gray-800 uppercase underline mt-1">
+            <h1 class="text-[15px] font-bold text-black uppercase  mt-3 mb-2 w-44 p-0 border-b-[1px] leading-none border-black">
               employment Details
             </h1>
             <!--sponsor company -->
             <div class="flex items-center mt-[1px] gap-14">
               <label
-                class="text-gray-600 px-[2px] text-xs uppercase font-semibold whitespace-nowrap"
+                class="text-black px-[2px] text-xs uppercase font-semibold whitespace-nowrap"
                 for=""
                 >Sponsor / company</label
               >
               <input
+              value="ACROSS THE DESERTS SAUDI EST."
                 type="text"
-                class="text-gray-600 px-[2px] text-xs w-full border outline-none border-gray-400 h-5 font-semibold"
+                class="text-black bg-transparent px-[2px] text-xs w-full border outline-none border-black h-5 font-semibold"
               />
             </div>
   
             <!-- job description , city -->
             <div>
-              <div class="flex gap-1 mt-1px">
+              <div class="flex gap-1 mt-[1px]">
                 <!-- "job description city" -->
-                <div class="flex items-center gap-24">
+                <div class="flex items-center gap-20">
                   <label
                     for="file-number"
-                    class="uppercase text-gray-600 text-xs font-semibold"
+                    class="uppercase text-black text-xs font-semibold text-nowrap"
                     >Job Description</label
                   >
                   <input
-                    class="text-gray-600 px-[2px] text-xs border border-gray-400 h-5 w-[205px] outline-none font-semibold"
+                    class="text-black bg-transparent px-[2px] text-xs border border-black h-5 w-[205px] outline-none font-semibold"
                     type="text"
                     name="file-number"
                     id="file-number"
@@ -291,17 +310,18 @@
                 </div>
   
                 <!-- "city" -->
-                <div class="flex items-center gap-14">
+                <div class="flex items-center gap-[38px]">
                   <label
                     for="category"
-                    class="text-xs uppercase text-gray-600 font-semibold"
+                    class="text-xs uppercase text-black font-semibold"
                     >city</label
                   >
                   <input
-                    class="text-gray-600 px-[2px] text-xs border h-5 border-gray-400 outline-none w-[112px] font-semibold"
+                    class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[124px] font-semibold"
                     type="text"
                     name="category"
                     id="category"
+                    value="JUBAIL"
                   />
                 </div>
               </div>
@@ -310,7 +330,7 @@
   
           <!-- medical examination -->
           <div>
-            <h1 class="text-lg text-gray-800 uppercase underline mt-2">
+            <h1 class="text-[15px] font-bold text-black uppercase  mb-2 mt-4 border-b-[1px]  border-black leading-none w-44">
               Medical examination
             </h1>
   
@@ -320,13 +340,14 @@
               <div>
                 <div class="flex items-center gap-14">
                   <label
-                    class="text-xs uppercase text-gray-600 pr-10 font-semibold whitespace-nowrap"
+                    class="text-xs uppercase text-black pr-[65px] font-semibold whitespace-nowrap"
                     for=""
                     >height</label
                   >
                   <input
+                  value="170 cm"
                     type="text"
-                    class="text-gray-600 px-[2px] text-xs w-[80px] border outline-none border-gray-400 h-5 font-semibold"
+                    class="text-black px-[2px] bg-transparent text-xs w-[80px] border outline-none border-black h-5 font-semibold"
                   />
                 </div>
               </div>
@@ -335,13 +356,14 @@
               <div>
                 <div class="flex gap-1 items-center">
                   <label
-                    class="text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+                    class="text-xs uppercase text-black font-semibold whitespace-nowrap"
                     for=""
                     >weight</label
                   >
                   <input
+                  value="60 kg"
                     type="text"
-                    class="text-gray-600 px-[2px] text-xs w-[130px] border outline-none border-gray-400 h-5 font-semibold"
+                    class="text-black bg-transparent px-[2px] text-xs w-[130px] border outline-none border-black h-5 font-semibold"
                   />
                 </div>
               </div>
@@ -350,31 +372,33 @@
             <!-- pulse, bp , temp -->
             <div class="flex mt-[1px] items-center">
               <!-- pulse -->
-              <div class="pr-[73px]">
+              <div class="pr-[68px]">
                 <div class="flex items-center gap-[60px]">
                   <label
-                    class="text-xs uppercase pr-10 text-gray-600 font-semibold whitespace-nowrap"
+                    class="text-xs uppercase pr-[64px] text-black font-semibold whitespace-nowrap"
                     for=""
                     >pulse</label
                   >
                   <input
+                  value="76 b/min"
                     type="text"
-                    class="text-gray-600 px-[2px] text-xs w-[80px] border outline-none border-gray-400 h-5 font-semibold"
+                    class="text-black px-[2px] bg-transparent text-xs w-[80px] border outline-none border-black h-5 font-semibold"
                   />
                 </div>
               </div>
   
               <!-- bp -->
-              <div class="pr-[33px]">
+              <div class="pr-[20px]">
                 <div class="flex gap-1 items-center">
                   <label
-                    class="text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+                    class="text-xs uppercase text-black font-semibold whitespace-nowrap"
                     for=""
                     >bp</label
                   >
                   <input
+                  value="120/80 mmHg"
                     type="text"
-                    class="text-gray-600 px-[2px] text-xs w-[130px] border outline-none border-gray-400 h-5 font-semibold"
+                    class="text-black px-[2px] text-xs bg-transparent w-[130px] border outline-none border-black h-5 font-semibold"
                   />
                 </div>
               </div>
@@ -382,13 +406,14 @@
               <div>
                 <div class="flex items-center gap-2">
                   <label
-                    class="text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+                    class="text-xs uppercase text-black font-semibold whitespace-nowrap"
                     for=""
                     >temp</label
                   >
                   <input
+                  value="36.3 C"
                     type="text"
-                    class="text-gray-600 px-[2px] text-xs w-[88px] border outline-none border-gray-400 h-5 font-semibold"
+                    class="text-black px-[2px] bg-transparent text-xs w-[60px] border outline-none border-black h-5 font-semibold"
                   />
                 </div>
               </div>
@@ -398,13 +423,14 @@
   
             <div class="flex items-center mt-[1px]">
               <label
-                class="pr-[43px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+                class="pr-[70px] text-xs uppercase text-black font-semibold whitespace-nowrap"
                 for=""
                 >Lungs & chest</label
               >
               <input
+              value="NORMAL"
                 type="text"
-                class="text-gray-600 px-[2px] text-xs w-full border outline-none border-gray-400 h-5 font-semibold"
+                class="text-black px-[2px] bg-transparent text-xs w-full border outline-none border-black h-5 font-semibold"
               />
             </div>
   
@@ -412,13 +438,14 @@
   
             <div class="flex items-center mt-[1px]">
               <label
-                class="pr-[27px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+                class="pr-[53px] text-xs uppercase text-black font-semibold whitespace-nowrap"
                 for=""
                 >curdio vascular</label
               >
               <input
+              value="NORMAL"
                 type="text"
-                class="text-gray-600 px-[2px] text-xs w-full border outline-none border-gray-400 h-5 font-semibold"
+                class="text-black bg-transparent px-[2px] text-xs w-full border outline-none border-black h-5 font-semibold"
               />
             </div>
   
@@ -426,50 +453,53 @@
   
             <div class="flex items-center mt-[1px]">
               <label
-                class="pr-[45px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+                class="pr-[72px] text-xs uppercase text-black font-semibold whitespace-nowrap"
                 for=""
                 >neurological</label
               >
               <input
+              value="NORMAL"
                 type="text"
-                class="text-gray-600 px-[2px] text-xs w-full border outline-none border-gray-400 h-5 font-semibold"
+                class="text-black px-[2px] bg-transparent text-xs w-full border outline-none border-black h-5 font-semibold"
               />
             </div>
           </div>
   
           <!-- vision -->
-          <div class="flex gap-40 mt-2">
-            <p class="text-xs uppercase text-gray-600 pr-10 font-semibold">
+          <div class="flex gap-[98px] mt-2">
+            <p class="text-xs uppercase text-black pr-10 font-semibold">
               vision
             </p>
-            <p class="text-xs uppercase text-gray-600 pr-10 font-semibold">
+            <p class="text-xs uppercase text-black pr-10 font-semibold">
               N6 = normal
             </p>
           </div>
           <!-- near ear -->
           <div class="">
             <!-- near -->
-            <div class="flex pl-[94px] mt-1">
-              <p class="text-xs uppercase text-gray-600 pr-8 font-semibold">
+            <div class="flex pl-[57px] mt-1">
+              <p class="text-xs uppercase text-black pr-5 font-semibold">
                 Near
               </p>
-              <div class="flex gap-1 pr-[23px]">
-                <p class="text-xs uppercase text-gray-600 font-semibold">
+              <div class="flex gap-1 pr-[43px]">
+                <p class="text-xs uppercase text-black font-semibold">
                   left
                 </p>
                 <input
-                  class="border outline-none border-gray-400 h-5 text-xs font-semibold text-gray-600 px-1"
+                value="6/6=NORMAL"
+                  class="border bg-transparent outline-none border-black h-5 text-xs w-[120px] font-semibold text-black px-1"
                   type="text"
                   name=""
                   id=""
                 />
               </div>
               <div class="flex gap-1">
-                <p class="text-xs uppercase text-gray-600 font-semibold">
+                <p class="text-xs uppercase text-black font-semibold">
                   right
                 </p>
                 <input
-                  class="border outline-none border-gray-400 h-5 text-xs font-semibold text-gray-600 px-1"
+                value="6/6=NORMAL"
+                  class="border outline-none bg-transparent border-black w-[242px] h-5 text-xs font-semibold text-black px-1"
                   type="text"
                   name=""
                   id=""
@@ -477,29 +507,29 @@
               </div>
             </div>
             <!-- ear -->
-            <div class="flex pl-[94px] mt-[1px] mb-10">
-              <p
-                class="text-xs uppercase text-gray-600 pr-8 font-semibold pl-2"
-              >
+            <div class="flex pl-[65px] mt-1">
+              <p class="text-xs uppercase text-black pr-5 font-semibold">
                 ear
               </p>
-              <div class="flex gap-1 pr-[23px]">
-                <p class="text-xs uppercase text-gray-600 font-semibold">
+              <div class="flex gap-1 pr-[43px]">
+                <p class="text-xs uppercase text-black font-semibold">
                   left
                 </p>
                 <input
-                  class="border outline-none border-gray-400 h-5 text-xs font-semibold text-gray-600 px-1"
+                value="6/6=NORMAL"
+                  class="border outline-none bg-transparent border-black h-5 text-xs w-[120px] font-semibold text-black px-1"
                   type="text"
                   name=""
                   id=""
                 />
               </div>
               <div class="flex gap-1">
-                <p class="text-xs uppercase text-gray-600 font-semibold">
+                <p class="text-xs uppercase text-black font-semibold">
                   right
                 </p>
                 <input
-                  class="border outline-none border-gray-400 h-5 text-xs font-semibold text-gray-600 px-1"
+                value="6/6=NORMAL"
+                  class="border outline-none bg-transparent border-black w-[242px] h-5 text-xs font-semibold text-black px-1"
                   type="text"
                   name=""
                   id=""
@@ -508,24 +538,26 @@
             </div>
   
             <!-- just left right -->
-            <div class="flex pl-[159px] mt-[1px]">
-              <div class="flex gap-1 pr-[23px]">
-                <p class="text-xs uppercase text-gray-600 font-semibold">
+            <div class="flex pl-[108px] mt-[1px] pt-10">
+              <div class="flex gap-1 pr-[43px]">
+                <p class="text-xs uppercase text-black font-semibold">
                   left
                 </p>
                 <input
-                  class="border outline-none border-gray-400 h-5 text-xs font-semibold text-gray-600 px-1"
+                value="NORMAL"
+                  class="border outline-none bg-transparent border-black h-5 text-xs font-semibold text-black px-1 w-[120px]"
                   type="text"
                   name=""
                   id=""
                 />
               </div>
               <div class="flex gap-1">
-                <p class="text-xs uppercase text-gray-600 font-semibold">
+                <p class="text-xs uppercase text-black font-semibold">
                   right
                 </p>
                 <input
-                  class="border outline-none border-gray-400 h-5 text-xs font-semibold text-gray-600 px-1"
+                value="NORMAL"
+                  class="border outline-none bg-transparent border-black h-5 text-xs font-semibold text-black px-1 w-[242px]"
                   type="text"
                   name=""
                   id=""
@@ -537,80 +569,86 @@
           <!-- general heal -->
           <div class="flex items-center mt-5">
             <label
-              class="pr-[78px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+              class="pr-[88px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >general heal th condition</label
             >
             <input
+            value="NO COUGH-NO FEVER-NO BREATHING DIFFICULTY"
               type="text"
-              class="w-full border outline-none border-gray-400 h-5 px-1 text-gray-600 font-semibold text-xs"
+              class="w-full border outline-none bg-transparent border-black h-5 px-1 text-black font-semibold text-xs"
             />
           </div>
   
           <!-- khali input -->
-          <div class="flex items-center mt-[1px]">
+          <div class="flex items-center ml-[168px] mt-[1px]">
             <label
-              class="pr-[80px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+              class="pr-[90px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
             ></label>
             <input
+            value="NO COVID-19 SYMPTOMS"
               type="text"
-              class="w-full ml-[168px] border text-gray-600 font-semibold text-xs px-1 outline-none border-gray-400 h-5"
+              class="w-full  border bg-transparent text-left text-black font-semibold text-xs px-1 outline-none border-black h-5"
             />
           </div>
   
           <!-- appearance -->
           <div class="flex items-center mt-[1px]">
             <label
-              class="pr-[169px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+              class="pr-[180px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >appearance</label
             >
             <input
+            value="NORMAL"
               type="text"
-              class="w-full border outline-none border-gray-400 px-1 text-xs text-gray-600 font-semibold h-5"
+              class="w-full border outline-none bg-transparent border-black px-1 text-xs text-black font-semibold h-5"
             />
           </div>
   
           <!-- suffering -->
           <div class="flex items-center mt-[1px]">
             <label
-              class="pr-[4px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+              class="pr-[7px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
-              >if suffering from any chronic disease</label
+              >if suffering from any chronic diseases</label
             >
             <input
+            value="NIL"
               type="text"
-              class="w-full border outline-none text-xs px-1 font-semibold text-gray-600 border-gray-400 h-5"
+              class="w-full border outline-none text-xs bg-transparent px-1 font-semibold text-black border-black h-5"
             />
           </div>
   
           <!-- additional comments -->
           <div class="flex items-center mt-[1px]">
             <label
-              class="pr-[70px] text-xs uppercase text-gray-600 font-semibold whitespace-nowrap"
+              class="pr-[81px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >additional comments if any</label
             >
             <input
+            value="FIT FOR WORK"
               type="text"
-              class="w-full border font-semibold text-gray-600  outline-none text-xs px-1 border-gray-400 h-5"
+              class="w-full border font-semibold text-black bg-transparent  outline-none text-xs px-1 border-black h-5"
             />
           </div>
         </div>
   
         <p
-          class="border border-gray-700 mt-5 text-xs text-center font-semibold"
+          class="border border-black mt-5 text-xs text-center font-semibold"
         >
           NOTE: THIS MEDICAL FITNESS REPORT IS VALID TILL 08/09/2025
         </p>
         <div class="flex justify-between mt-3">
-          <p class=" font-semibold text-sm ">
-            DR. SAEED ABDUL KHALIQ
-          </p >
+         
           <p class=" font-semibold text-sm ">
             DR. SHAHID HUSSAIN
           </p>
+          <p class=" font-semibold text-sm ">
+            DR. SAEED ABDUL KHALIQ
+          </p >
         </div>
       </form>
 
@@ -618,7 +656,7 @@
   <div class=" relative  ">
   
 
-    <div class="flex relative gap-16 -mt-10">
+    <div class="flex relative gap-16 -mt-12">
       <img src="./images/shahed.png" class="h-[155px]" alt="">
       <img src="./images/logo-signature.png" class="h-[155px]" alt="">
       <img src="./images/saeed.png" class="h-[155px]" alt="">
@@ -629,8 +667,8 @@
  </div>
 
  <hr class="border border-blue-600 w-[95%] mx-auto">
- <p class="text-base font-bold text-blue-600 w-[95%] mx-auto">س.ت ٣٠٣٠٠٢٨٨٨٨ - ٢٠٠٠ ص.ب ٢٨٧ - الجبيل ٣١٩٥١ - المملكة العربية السعودية +٩٦٦ ١٣ ٣٣٢ ٢٨٨٨ - +٩٦٦ ١٣ ٣٣٢ ١٨٨٨</p>
- <p class="text-blue-600 text-[13px] font-bold w-[95%] mx-auto">C.R. 2055023848 - Tel.: +966 13 363 1888 - +966 13 363 2888 - P.O. Box 284 Jubail 31951 - Kingdom of Saudi Arabia</p>
+ <p class="text-base font-extrabold text-blue-600 w-[95%] text-nowrap mx-auto ">س.ت ٣٠٣٠٠٢٨٨٨٨ - ٢٠٠٠ ص.ب ٢٨٧ - الجبيل ٣١٩٥١ - المملكة العربية السعودية +٩٦٦ ١٣ ٣٣٢  - +٩٦٦ ١٣ ٣٣٢ ١٨٨٨</p>
+ <p class="text-blue-600 text-[12px] font-extrabold w-[95%] mx-auto text-nowrap">C.R. 2055023848 - Tel.: +966 13 363 1888 - +966 13 363 2888 - P.O. Box 284 Jubail 31951 - Kingdom of Saudi Arabia</p>
  <p class="text-red-500 text-xs text-center font-semibold">E-mail: info@jubailmedicare.com - Wbsite: www.jubailmedicare.com</p>
   </div>
 
@@ -642,13 +680,15 @@
 
 
        <!-- Download PDF Button -->
-       <button
-       id="download-btn"
-       onclick="downloadPDF()"
-       class="text-red-500"
-     >
-       Download PDF
-     </button>
+     <div class="flex  justify-center items-center">
+      <button
+      id="download-btn"
+      onclick="downloadPDF()"
+      class="text-white bg-green-600 my-2 px-4 py-2"
+    >
+      Download PDF
+    </button>
+     </div>
    
   </body>
 </html>
