@@ -53,18 +53,19 @@
   </head>
   <body class="min-h-screen flex items-center justify-center  bg-gray-100">
     <div   id="form-to-download"
-    class="bg-[#ffffff] pt-5   rounded-lg shadow-md max-w-[210mm] w-full"
+    class="bg-[#ffffff] pt-5   rounded-lg shadow-md  w-[210mm]  mx-auto overflow-x-auto
+    " 
     style="min-height: 297mm">
       <div
       class=""
       
       >
         <!-- logo -->
-        <div class="flex justify-center items-center w-full  px-20 ">
+        <div class="flex justify-center items-center w-[800px] mx-auto px-20 ">
           <img src="./images/logo.png" class="w-full h-20 " alt="Logo" />
         </div>
 <!-- for background -->
- <div class="mx-9 bg-[url('./images/bg.png')] brigh ">
+ <div class="mx-9 bg-[url('./images/bg.png')] w-[730px] ">
        <!-- heading -->
        <div class="flex justify-between items-center  pt-[50px] px-[84px]">
         <h1 class=" border-b-[1px]  border-gray-800 font-semibold text-[20px] mb-0 pb-0 leading-none ">
@@ -83,7 +84,7 @@
           <div class="flex flex-1 items-center">
             <label
               for="to"
-              class="pr-[69px] uppercase text-black text-xs font-semibold"
+              class="pr-[37px] uppercase text-black text-xs font-semibold"
               >To</label
             >
             <input
@@ -114,11 +115,11 @@
         <!-- 2nd Row -->
         <div class="flex gap-1 mt-2">
           <!-- "File number" -->
-          <div class="flex items-center pr-[11px] gap-1">
+          <div class="flex items-center pr-[30px] gap-[10px]">
             <label
               for="file-number"
               class="uppercase text-black text-xs font-semibold text-nowrap"
-              >File number</label
+              >File No</label
             >
             <input
               class="text-black px-[2px] text-xs bg-transparent border border-black h-5 w-[90px] outline-none font-semibold"
@@ -137,7 +138,7 @@
               >Category</label
             >
             <input
-              class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[85px] font-semibold"
+              class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[108px] font-semibold"
               type="text"
               name="category"
               id="category"
@@ -146,14 +147,14 @@
           </div>
   
           <!-- "Blood group" -->
-          <div class="flex items-center gap-[60px]">
+          <div class="flex items-center gap-[61px]">
             <label
               for="blood-group"
               class="uppercase text-xs text-black font-semibold text-nowrap"
               >Blood group</label
             >
             <input
-              class="text-black bg-transparent px-[2px] text-xs border h-5 flex border-black outline-none w-[80px] font-semibold"
+              class="text-black bg-transparent px-[2px] text-xs border h-5 flex border-black outline-none w-[90px] font-semibold"
               type="text"
               name="blblack
               id="blood-group"
@@ -183,7 +184,7 @@
           <div>
             <div class="flex gap-1 mt-[1px]">
               <!-- "Nationality" -->
-              <div class="flex items-center gap-[25px]">
+              <div class="flex items-center gap-[28px]">
                 <label
                   for="file-number"
                   class="uppercase text-black text-xs font-semibold"
@@ -215,7 +216,7 @@
               </div>
   
               <!-- "sex group" -->
-              <div class="flex items-center gap-[30px]">
+              <div class="flex items-center gap-[43px]">
                 <label
                   for="blood-group"
                   class="uppercase text-xs text-black font-semibold"
@@ -252,14 +253,14 @@
               </div>
   
               <!-- "date of birth" -->
-              <div class="flex items-center gap-[42px]">
+              <div class="flex items-center gap-[50px]">
                 <label
                   for="category"
                   class="text-xs uppercase text-black font-semibold text-nowrap"
                   >Date Of birth</label
                 >
                 <input
-                  class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[124px] font-semibold"
+                  class="text-black bg-transparent px-[2px] text-xs border h-5 border-black outline-none w-[136px] font-semibold"
                   type="text"
                   name="category"
                   id="category"
@@ -292,7 +293,7 @@
             <div>
               <div class="flex gap-1 mt-[1px]">
                 <!-- "job description city" -->
-                <div class="flex items-center gap-[79px]">
+                <div class="flex items-center gap-[80px]">
                   <label
                     for="file-number"
                     class="uppercase text-black text-xs font-semibold text-nowrap"
@@ -307,7 +308,7 @@
                 </div>
   
                 <!-- "city" -->
-                <div class="flex items-center gap-[38px]">
+                <div class="flex items-center gap-[56px]">
                   <label
                     for="category"
                     class="text-xs uppercase text-black font-semibold"
@@ -369,10 +370,10 @@
             <!-- pulse, bp , temp -->
             <div class="flex mt-[1px] items-center">
               <!-- pulse -->
-              <div class="pr-[71px]">
+              <div class="pr-[69px]">
                 <div class="flex items-center gap-[60px]">
                   <label
-                    class="text-xs uppercase pr-[64px] text-black font-semibold whitespace-nowrap"
+                    class="text-xs uppercase pr-[61px] text-black font-semibold whitespace-nowrap"
                     for=""
                     >pulse</label
                   >
@@ -410,7 +411,7 @@
                   <input
                   value="36.3 C"
                     type="text"
-                    class="text-black px-[2px] bg-transparent text-xs w-[54px] border outline-none border-black h-5 font-semibold"
+                    class="text-black px-[2px] bg-transparent text-xs w-[72px] border outline-none border-black h-5 font-semibold"
                   />
                 </div>
               </div>
@@ -420,7 +421,7 @@
   
             <div class="flex items-center mt-[1px]">
               <label
-                class="pr-[65px] text-xs uppercase text-black font-semibold whitespace-nowrap"
+                class="pr-[67px] text-xs uppercase text-black font-semibold whitespace-nowrap"
                 for=""
                 >Lungs & chest</label
               >
@@ -450,7 +451,7 @@
   
             <div class="flex items-center mt-[1px]">
               <label
-                class="pr-[67px] text-xs uppercase text-black font-semibold whitespace-nowrap"
+                class="pr-[69px] text-xs uppercase text-black font-semibold whitespace-nowrap"
                 for=""
                 >neurological</label
               >
@@ -496,7 +497,7 @@
                 </p>
                 <input
                 value="6/6=NORMAL"
-                  class="border outline-none bg-transparent border-black w-[222px] h-5 text-xs font-semibold text-black px-1"
+                  class="border outline-none bg-transparent border-black w-[242px] h-5 text-xs font-semibold text-black px-1"
                   type="text"
                   name=""
                   id=""
@@ -526,7 +527,7 @@
                 </p>
                 <input
                 value="6/6=NORMAL"
-                  class="border outline-none bg-transparent border-black w-[222px] h-5 text-xs font-semibold text-black px-1"
+                  class="border outline-none bg-transparent border-black w-[242px] h-5 text-xs font-semibold text-black px-1"
                   type="text"
                   name=""
                   id=""
@@ -554,7 +555,7 @@
                 </p>
                 <input
                 value="NORMAL"
-                  class="border outline-none bg-transparent border-black h-5 text-xs font-semibold text-black px-1 w-[222px]"
+                  class="border outline-none bg-transparent border-black h-5 text-xs font-semibold text-black px-1 w-[242px]"
                   type="text"
                   name=""
                   id=""
@@ -566,7 +567,7 @@
           <!-- general heal -->
           <div class="flex items-center mt-5">
             <label
-              class="pr-[95px] text-xs uppercase text-black font-semibold whitespace-nowrap"
+              class="pr-[99px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >general heal th condition</label
             >
@@ -578,7 +579,7 @@
           </div>
   
           <!-- khali input -->
-          <div class="flex items-center ml-[188.5px] mt-[1px]">
+          <div class="flex items-center ml-[179px] mt-[1px]">
             <label
               class="pr-[90px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
@@ -593,7 +594,7 @@
           <!-- appearance -->
           <div class="flex items-center mt-[1px]">
             <label
-              class="pr-[198px] text-xs uppercase text-black font-semibold whitespace-nowrap"
+              class="pr-[191px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >appearance</label
             >
@@ -607,7 +608,7 @@
           <!-- suffering -->
           <div class="flex items-center mt-[1px]">
             <label
-              class="pr-[7px] text-xs uppercase text-black font-semibold whitespace-nowrap"
+              class="pr-[18px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >if suffering from any chronic diseases</label
             >
@@ -621,7 +622,7 @@
           <!-- additional comments -->
           <div class="flex items-center mt-[1px]">
             <label
-              class="pr-[91px] text-xs uppercase text-black font-semibold whitespace-nowrap"
+              class="pr-[92px] text-xs uppercase text-black font-semibold whitespace-nowrap"
               for=""
               >additional comments if any</label
             >
