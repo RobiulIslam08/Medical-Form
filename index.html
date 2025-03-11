@@ -52,7 +52,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        padding: 20px;
+        /* padding: 20px; */
       }
 
       #form-to-download {
@@ -68,6 +68,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -77,30 +78,33 @@
         opacity: 0.1;
         pointer-events: none;
         overflow: hidden;
-        z-index: 0;
+        z-index: 10;
+        margin: 100px 40px;
       }
 
       .watermark span {
-        font-size: 24px;
+        font-size: 25px;
+        font-weight: bold;
         white-space: nowrap;
         color: #000;
-        transform: rotate(-45deg);
-        margin: 20px;
+        letter-spacing: 16px;
+        padding: 10px 0;
       }
 
       .content {
         position: relative;
         z-index: 1;
-        padding: 20px 70px;
+        padding: 20px 100px;
       }
 
       .logo-section {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
       }
 
       .logo-section img {
-        height: 60px;
+        height: 90px;
+        width: 620px;
       }
 
       .header-section {
@@ -111,15 +115,23 @@
       }
 
       .header-title {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         text-align: center;
         flex-grow: 1;
+        line-height: 12px;
+      }
+      .header-hr {
+        border: 0.25px solid rgba(1, 1, 1, 0.5);
+
+        width: 448px;
+        display: block;
+        margin: 1px auto; /* মাঝখানে রাখতে */
       }
 
       .qr-code {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
       }
 
       .form-section {
@@ -127,10 +139,12 @@
       }
 
       .section-title {
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 14px;
+
+        font-weight: 700;
         margin-bottom: 5px;
         text-decoration: underline;
+        color: #131313;
       }
 
       .form-row {
@@ -141,16 +155,21 @@
 
       .form-label {
         position: absolute;
-        font-size: 10px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #3c3b3b;
         text-transform: uppercase;
       }
 
       .form-field {
         position: absolute;
-        border: 1px solid #000;
+        border: 1px solid #3c3b3b;
         height: 18px;
-        font-size: 10px;
+        font-size: 11px;
         padding: 2px;
+        font-weight: 600;
+        color: #3c3b3b;
+        outline: none;
       }
 
       .vision-section {
@@ -212,7 +231,6 @@
       }
 
       #download-btn {
-      
         background-color: #22c55e;
         color: white;
         padding: 8px 16px;
@@ -220,6 +238,10 @@
         border-radius: 4px;
         cursor: pointer;
         font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
       }
 
       @media print {
@@ -248,10 +270,6 @@
         <span>JUBAIL MEDICARE COMPANY</span>
         <span>JUBAIL MEDICARE COMPANY</span>
         <span>JUBAIL MEDICARE COMPANY</span>
-        <span>JUBAIL MEDICARE COMPANY</span>
-        <span>JUBAIL MEDICARE COMPANY</span>
-        <span>JUBAIL MEDICARE COMPANY</span>
-        <span>JUBAIL MEDICARE COMPANY</span>
       </div>
 
       <div class="content">
@@ -261,184 +279,356 @@
 
         <div class="header-section">
           <div></div>
-          <h1 class="header-title">MEDICAL CHECK UP SUMMARY / CERTIFICATE</h1>
+          <div class="header-title">
+            <h1 class="header-title">MEDICAL CHECK UP SUMMARY / CERTIFICATE</h1>
+            <hr class="header-hr" />
+          </div>
           <img src="./images/qr-scan.png" alt="QR Code" class="qr-code" />
         </div>
 
         <div class="form-row">
-          <span class="form-label" style="left: 0;">TO</span>
-          <input type="text" class="form-field" style="left: 30px; width: 300px;" />
-          <span class="form-label" style="left: 340px;">DATE</span>
-          <input type="text" class="form-field" style="left: 380px; width: 100px;" />
+          <span class="form-label" style="left: 0">TO</span>
+          <input
+            type="text"
+            class="form-field"
+            style="left: 60px; width: 310px"
+          />
+          <span class="form-label" style="left: 375px">DATE</span>
+          <input
+            type="text"
+            class="form-field"
+            style="left: 440px; width: 160px"
+          />
         </div>
 
         <div class="form-row">
-          <span class="form-label" style="left: 0;">FILE NO</span>
-          <input type="text" class="form-field" style="left: 60px; width: 80px;" value="13875255" />
-          <span class="form-label" style="left: 150px;">CATEGORY</span>
-          <input type="text" class="form-field" style="left: 220px; width: 80px;" value="NEW" />
-          <span class="form-label" style="left: 310px;">BLOOD GROUP</span>
-          <input type="text" class="form-field" style="left: 400px; width: 80px;" value="A+VE" />
+          <span class="form-label" style="left: 0">FILE NO</span>
+          <input
+            type="text"
+            class="form-field"
+            style="left: 60px; width: 110px"
+            value="13875255"
+          />
+          <span class="form-label" style="left: 200px">CATEGORY</span>
+          <input
+            type="text"
+            class="form-field"
+            style="left: 265px; width: 105px"
+            value="NEW"
+          />
+          <span class="form-label" style="left: 375px">BLOOD GROUP</span>
+          <input
+            type="text"
+            class="form-field"
+            style="left: 500px; width: 100px"
+            value="A+VE"
+          />
         </div>
 
         <div class="form-section">
           <h2 class="section-title">PERSONAL DETAILS</h2>
-          
+
           <div class="form-row">
-            <span class="form-label" style="left: 0;">NAME</span>
-            <input type="text" class="form-field" style="left: 60px; width: 440px;" />
+            <span class="form-label" style="left: 0">NAME</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 60px; width: 440px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">NATIONALITY</span>
-            <input type="text" class="form-field" style="left: 80px; width: 100px;" />
-            <span class="form-label" style="left: 190px;">AGE</span>
-            <input type="text" class="form-field" style="left: 220px; width: 80px;" />
-            <span class="form-label" style="left: 310px;">SEX</span>
-            <input type="text" class="form-field" style="left: 340px; width: 60px;" />
+            <span class="form-label" style="left: 0">NATIONALITY</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 80px; width: 100px"
+            />
+            <span class="form-label" style="left: 190px">AGE</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 220px; width: 80px"
+            />
+            <span class="form-label" style="left: 310px">SEX</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 340px; width: 60px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">PASSPORT NO/IQAMA</span>
-            <input type="text" class="form-field" style="left: 120px; width: 100px;" />
-            <span class="form-label" style="left: 230px;">DATE OF BIRTH</span>
-            <input type="text" class="form-field" style="left: 320px; width: 100px;" />
+            <span class="form-label" style="left: 0">PASSPORT NO/IQAMA</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 120px; width: 100px"
+            />
+            <span class="form-label" style="left: 230px">DATE OF BIRTH</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 320px; width: 100px"
+            />
           </div>
         </div>
 
         <div class="form-section">
           <h2 class="section-title">EMPLOYMENT DETAILS</h2>
-          
+
           <div class="form-row">
-            <span class="form-label" style="left: 0;">SPONSOR / COMPANY</span>
-            <input type="text" class="form-field" style="left: 120px; width: 380px;" />
+            <span class="form-label" style="left: 0">SPONSOR / COMPANY</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 120px; width: 380px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">JOB DESCRIPTION</span>
-            <input type="text" class="form-field" style="left: 100px; width: 280px;" />
-            <span class="form-label" style="left: 390px;">CITY</span>
-            <input type="text" class="form-field" style="left: 420px; width: 80px;" />
+            <span class="form-label" style="left: 0">JOB DESCRIPTION</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 100px; width: 280px"
+            />
+            <span class="form-label" style="left: 390px">CITY</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 420px; width: 80px"
+            />
           </div>
         </div>
 
         <div class="form-section">
           <h2 class="section-title">MEDICAL EXAMINATION</h2>
-          
+
           <div class="form-row">
-            <span class="form-label" style="left: 0;">HEIGHT</span>
-            <input type="text" class="form-field" style="left: 60px; width: 80px;" />
-            <span class="form-label" style="left: 150px;">WEIGHT</span>
-            <input type="text" class="form-field" style="left: 210px; width: 80px;" />
+            <span class="form-label" style="left: 0">HEIGHT</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 60px; width: 80px"
+            />
+            <span class="form-label" style="left: 150px">WEIGHT</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 210px; width: 80px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">PULSE</span>
-            <input type="text" class="form-field" style="left: 60px; width: 80px;" />
-            <span class="form-label" style="left: 150px;">BP</span>
-            <input type="text" class="form-field" style="left: 180px; width: 80px;" />
-            <span class="form-label" style="left: 270px;">TEMP</span>
-            <input type="text" class="form-field" style="left: 310px; width: 80px;" />
+            <span class="form-label" style="left: 0">PULSE</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 60px; width: 80px"
+            />
+            <span class="form-label" style="left: 150px">BP</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 180px; width: 80px"
+            />
+            <span class="form-label" style="left: 270px">TEMP</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 310px; width: 80px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">LUNGS & CHEST</span>
-            <input type="text" class="form-field" style="left: 100px; width: 400px;" />
+            <span class="form-label" style="left: 0">LUNGS & CHEST</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 100px; width: 400px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">CURDIO VASCULAR</span>
-            <input type="text" class="form-field" style="left: 100px; width: 400px;" />
+            <span class="form-label" style="left: 0">CURDIO VASCULAR</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 100px; width: 400px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">NEUROLOGICAL</span>
-            <input type="text" class="form-field" style="left: 100px; width: 400px;" />
+            <span class="form-label" style="left: 0">NEUROLOGICAL</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 100px; width: 400px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">VISION</span>
-            <span style="position: absolute; left: 60px; font-size: 10px;">N6 = NORMAL</span>
+            <span class="form-label" style="left: 0">VISION</span>
+            <span style="position: absolute; left: 60px; font-size: 10px"
+              >N6 = NORMAL</span
+            >
           </div>
 
           <div class="vision-section">
             <div class="vision-row">
-              <span class="vision-label" style="left: 0;">NEAR</span>
-              <span class="vision-label" style="left: 40px;">LEFT</span>
-              <input type="text" class="form-field" style="left: 70px; width: 80px;" />
-              <span class="vision-label" style="left: 160px;">RIGHT</span>
-              <input type="text" class="form-field" style="left: 200px; width: 200px;" />
+              <span class="vision-label" style="left: 0">NEAR</span>
+              <span class="vision-label" style="left: 40px">LEFT</span>
+              <input
+                type="text"
+                class="form-field"
+                style="left: 70px; width: 80px"
+              />
+              <span class="vision-label" style="left: 160px">RIGHT</span>
+              <input
+                type="text"
+                class="form-field"
+                style="left: 200px; width: 200px"
+              />
             </div>
 
             <div class="vision-row">
-              <span class="vision-label" style="left: 0;">EAR</span>
-              <span class="vision-label" style="left: 40px;">LEFT</span>
-              <input type="text" class="form-field" style="left: 70px; width: 80px;" />
-              <span class="vision-label" style="left: 160px;">RIGHT</span>
-              <input type="text" class="form-field" style="left: 200px; width: 200px;" />
+              <span class="vision-label" style="left: 0">EAR</span>
+              <span class="vision-label" style="left: 40px">LEFT</span>
+              <input
+                type="text"
+                class="form-field"
+                style="left: 70px; width: 80px"
+              />
+              <span class="vision-label" style="left: 160px">RIGHT</span>
+              <input
+                type="text"
+                class="form-field"
+                style="left: 200px; width: 200px"
+              />
             </div>
 
             <div class="vision-row">
-              <span class="vision-label" style="left: 40px;">LEFT</span>
-              <input type="text" class="form-field" style="left: 70px; width: 80px;" />
-              <span class="vision-label" style="left: 160px;">RIGHT</span>
-              <input type="text" class="form-field" style="left: 200px; width: 200px;" />
+              <span class="vision-label" style="left: 40px">LEFT</span>
+              <input
+                type="text"
+                class="form-field"
+                style="left: 70px; width: 80px"
+              />
+              <span class="vision-label" style="left: 160px">RIGHT</span>
+              <input
+                type="text"
+                class="form-field"
+                style="left: 200px; width: 200px"
+              />
             </div>
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">GENERAL HEAL TH CONDITION</span>
-            <input type="text" class="form-field" style="left: 160px; width: 340px;" />
+            <span class="form-label" style="left: 0"
+              >GENERAL HEAL TH CONDITION</span
+            >
+            <input
+              type="text"
+              class="form-field"
+              style="left: 160px; width: 340px"
+            />
           </div>
 
           <div class="form-row">
-            <input type="text" class="form-field" style="left: 160px; width: 340px;" />
+            <input
+              type="text"
+              class="form-field"
+              style="left: 160px; width: 340px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">APPEARANCE</span>
-            <input type="text" class="form-field" style="left: 160px; width: 340px;" />
+            <span class="form-label" style="left: 0">APPEARANCE</span>
+            <input
+              type="text"
+              class="form-field"
+              style="left: 160px; width: 340px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">IF SUFFERING FROM ANY CHRONIC DISEASES</span>
-            <input type="text" class="form-field" style="left: 160px; width: 340px;" />
+            <span class="form-label" style="left: 0"
+              >IF SUFFERING FROM ANY CHRONIC DISEASES</span
+            >
+            <input
+              type="text"
+              class="form-field"
+              style="left: 160px; width: 340px"
+            />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0;">ADDITIONAL COMMENTS IF ANY</span>
-            <input type="text" class="form-field" style="left: 160px; width: 340px;" />
+            <span class="form-label" style="left: 0"
+              >ADDITIONAL COMMENTS IF ANY</span
+            >
+            <input
+              type="text"
+              class="form-field"
+              style="left: 160px; width: 340px"
+            />
           </div>
         </div>
 
-        <div style="border: 1px solid black; text-align: center; padding: 3px; margin: 10px 0; font-size: 10px;">
+        <div
+          style="
+            border: 1px solid black;
+            text-align: center;
+            padding: 3px;
+            margin: 10px 0;
+            font-size: 10px;
+          "
+        >
           NOTE: THIS MEDICAL FITNESS REPORT IS VALID TILL 08/09/2025
         </div>
 
         <div class="signature-section">
           <div>
-            <p style="font-size: 10px;">DR. SHAHID HUSSAIN</p>
-            <img src="./images/shahed.png" alt="Signature 1" class="signature-img">
+            <p style="font-size: 10px">DR. SHAHID HUSSAIN</p>
+            <img
+              src="./images/shahed.png"
+              alt="Signature 1"
+              class="signature-img"
+            />
           </div>
-          <img src="./images/logo-signature.png" alt="Logo Signature" class="signature-img">
+          <img
+            src="./images/logo-signature.png"
+            alt="Logo Signature"
+            class="signature-img"
+          />
           <div>
-            <p style="font-size: 10px;">DR. SAEED ABDUL KHALIQ</p>
-            <img src="./images/saeed.png" alt="Signature 2" class="signature-img">
+            <p style="font-size: 10px">DR. SAEED ABDUL KHALIQ</p>
+            <img
+              src="./images/saeed.png"
+              alt="Signature 2"
+              class="signature-img"
+            />
           </div>
         </div>
 
         <div class="footer">
-          <hr>
-          <p class="arabic">س.ت ٣٠٣٠٠٢٨٨٨٨ - ٢٠٠٠ ص.ب ٢٨٧ - الجبيل ٣١٩٥١ - المملكة العربية السعودية +٩٦٦ ١٣ ٣٣٢ - +٩٦٦ ١٣ ٣٣٢ ١٨٨٨</p>
-          <p class="contact">C.R. 2055023848 - Tel.: +966 13 363 1888 - +966 13 363 2888 - P.O. Box 284 Jubail 31951 - Kingdom of Saudi Arabia</p>
-          <p class="email">E-mail: info@jubailmedicare.com - Website: www.jubailmedicare.com</p>
+          <hr />
+          <p class="arabic">
+            س.ت ٣٠٣٠٠٢٨٨٨٨ - ٢٠٠٠ ص.ب ٢٨٧ - الجبيل ٣١٩٥١ - المملكة العربية
+            السعودية +٩٦٦ ١٣ ٣٣٢ - +٩٦٦ ١٣ ٣٣٢ ١٨٨٨
+          </p>
+          <p class="contact">
+            C.R. 2055023848 - Tel.: +966 13 363 1888 - +966 13 363 2888 - P.O.
+            Box 284 Jubail 31951 - Kingdom of Saudi Arabia
+          </p>
+          <p class="email">
+            E-mail: info@jubailmedicare.com - Website: www.jubailmedicare.com
+          </p>
         </div>
       </div>
+      <button id="download-btn" class="download-btn" onclick="downloadPDF()">
+        Download PDF
+      </button>
     </div>
-
-    <button id="download-btn" onclick="downloadPDF()">
-      Download PDF
-    </button>
   </body>
 </html>
-
