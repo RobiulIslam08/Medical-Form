@@ -48,10 +48,12 @@
       body {
         font-family: Arial, sans-serif;
         background-color: #f3f4f6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 0 auto;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         /* padding: 20px; */
       }
 
@@ -86,15 +88,15 @@
         font-size: 25px;
         font-weight: bold;
         white-space: nowrap;
-        color: #000;
+        color: #8026d5;
         letter-spacing: 16px;
-        padding: 10px 0;
+        padding: 7px 0;
       }
 
       .content {
         position: relative;
         z-index: 1;
-        padding: 15px 100px 15px 100px;
+        padding: 15px 100px 0px 100px;
       }
 
       .logo-section {
@@ -111,7 +113,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
 
       .header-title {
@@ -189,13 +191,14 @@
 
       .signature-section {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 10px;
       }
 
       .signature-img {
-        height: 125px;
+        height: 135px;
+        transform: rotate(10deg);
       }
 
       .footer {
@@ -204,28 +207,32 @@
         left: 0;
         width: 100%;
         text-align: center;
-        bottom: -30px;
+        bottom: -55px;
       }
 
       .footer hr {
         border: 1px solid #004bec;
-        width: 95%;
+        width: 86%;
         margin: 5px auto;
       }
 
       .footer p {
+        font-weight: bold;
         margin: 3px 0;
-        font-size: 10px;
+        font-size: 12px;
       }
 
       .footer .arabic {
-        font-size: 12px;
+        font-weight: bold;
+        font-size: 13px;
         font-weight: bold;
         color: #002a84;
       }
 
       .footer .contact {
         color: #022b83;
+        margin-top: -3px;
+        font-size: 12px;
       }
 
       .footer .email {
@@ -236,7 +243,7 @@
       #download-btn {
         background-color: #22c55e;
         color: white;
-        padding: 2px 10px;
+        padding: 6px 14px;
         border: none;
         border-radius: 2px;
         cursor: pointer;
@@ -246,6 +253,7 @@
         align-items: center;
         margin: 0 auto;
         margin-top: 26px;
+        margin-bottom: 20px;
       }
 
       @media print {
@@ -265,7 +273,22 @@
       <div class="watermark">
         <span
           >JUBAIL
-          <span style="color: #ff0000;">MEDICARE</span>
+          <span style="color: #b20000">MEDICARE</span>
+          COMPANY</span
+        >
+        <span
+          >JUBAIL
+          <span style="color: #b20000">MEDICARE</span>
+          COMPANY</span
+        >
+        <span
+          >JUBAIL
+          <span style="color: #b20000">MEDICARE</span>
+          COMPANY</span
+        >
+        <span
+          >JUBAIL
+          <span style="color: #b20000">MEDICARE</span>
           COMPANY</span
         >
         <span
@@ -428,46 +451,42 @@
               type="text"
               class="form-field"
               value="Bangladesh"
-              style="left: 100px; width: 100px; margin-top: -5px"
+              style="left: 100px; width: 100px; top: -5px"
             />
-            <span class="form-label" style="left: 205px; margin-top: -3px"
-              >AGE</span
-            >
+            <span class="form-label" style="left: 205px; top: -3px">AGE</span>
             <input
               type="text"
               class="form-field"
               value="35 YRS"
-              style="left: 310px; width: 176px; margin-top: -5px"
+              style="left: 310px; width: 176px; top: -5px"
             />
-            <span class="form-label" style="left: 490px; margin-top: -3px"
-              >SEX</span
-            >
+            <span class="form-label" style="left: 490px; top: -3px">SEX</span>
             <input
               type="text"
               class="form-field"
               value="M"
-              style="left: 530px; width: 70px; margin-top: -5px"
+              style="left: 530px; width: 70px; top: -5px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0; margin-top: -6px"
+            <span class="form-label" style="left: 0; top: -6px"
               >PASSPORT NO/IQAMA</span
             >
             <input
               type="text"
               class="form-field"
-              style="left: 200px; width: 110px; margin-top: -10px"
+              style="left: 200px; width: 110px; top: -10px"
               value="2597566708"
             />
-            <span class="form-label" style="left: 315px; margin-top: -6px"
+            <span class="form-label" style="left: 315px; top: -6px"
               >DATE OF BIRTH</span
             >
             <input
               type="text"
               class="form-field"
               value="01/01/1990"
-              style="left: 487px; width: 113px; margin-top: -10px"
+              style="left: 487px; width: 113px; top: -10px"
             />
           </div>
         </div>
@@ -488,22 +507,20 @@
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0; margin-top: -3px"
+            <span class="form-label" style="left: 0; top: -3px"
               >JOB DESCRIPTION</span
             >
             <input
               type="text"
               class="form-field"
-              style="left: 185px; width: 280px; margin-top: -5px"
+              style="left: 185px; width: 280px; top: -5px"
             />
-            <span class="form-label" style="left: 470px; margin-top: -3px"
-              >CITY</span
-            >
+            <span class="form-label" style="left: 470px; top: -3px">CITY</span>
             <input
               type="text"
               class="form-field"
               value="JUBAIL"
-              style="left: 520px; width: 80px; margin-top: -5px"
+              style="left: 520px; width: 80px; top: -5px"
             />
           </div>
         </div>
@@ -531,72 +548,66 @@
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0; margin-top: -3px"
-              >PULSE</span
-            >
+            <span class="form-label" style="left: 0; top: -3px">PULSE</span>
             <input
               type="text"
               class="form-field"
               value="76 b/min"
-              style="left: 155px; width: 80px; margin-top: -5px"
+              style="left: 155px; width: 80px; top: -5px"
             />
-            <span class="form-label" style="left: 305px; margin-top: -3px"
-              >BP</span
-            >
+            <span class="form-label" style="left: 305px; top: -3px">BP</span>
             <input
               type="text"
               class="form-field"
               value="180/20 mmHg"
-              style="left: 325px; width: 140px; margin-top: -5px"
+              style="left: 325px; width: 140px; top: -5px"
             />
-            <span class="form-label" style="left: 485px; margin-top: -3px"
-              >TEMP</span
-            >
+            <span class="form-label" style="left: 485px; top: -3px">TEMP</span>
             <input
               type="text"
               class="form-field"
               value="36.8 C"
-              style="left: 520px; width: 80px; margin-top: -5px"
+              style="left: 520px; width: 80px; top: -5px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0; margin-top: -6px"
+            <span class="form-label" style="left: 0; top: -6px"
               >LUNGS & CHEST</span
             >
             <input
               type="text"
               class="form-field"
               value="NORMAL"
-              style="left: 155px; width: 445px; margin-top: -10px"
+              style="left: 155px; width: 445px; top: -10px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0; margin-top: -12px"
+            <span class="form-label" style="left: 0; top: -12px"
               >CURDIO VASCULAR</span
             >
             <input
               type="text"
               class="form-field"
               value="NORMAL"
-              style="left: 155px; width: 445px; margin-top: -15px"
+              style="left: 155px; width: 445px; top: -15px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0; margin-top: -18px"
+            <span class="form-label" style="left: 0; top: -18px"
               >NEUROLOGICAL</span
             >
             <input
               type="text"
               class="form-field"
               value="NORMAL"
-              style="left: 155px; width: 445px; margin-top: -20px"
+              style="left: 155px; width: 445px; top: -20px"
             />
           </div>
 
-          <div class="form-row" style="margin-top: -10px">
+          <div class="form-row" style="top: -10px">
             <span class="form-label" style="left: 0">VISION</span>
             <span
               style="
@@ -611,7 +622,7 @@
           </div>
 
           <div class="vision-section">
-            <div class="vision-row" style="margin-top: -5px">
+            <div class="vision-row" style="top: -5px">
               <span class="form-label" style="left: 35px">NEAR</span>
               <span class="form-label" style="left: 90px">LEFT</span>
               <input
@@ -636,14 +647,14 @@
                 type="text"
                 class="form-field"
                 value="6/6=NORMAL"
-                style="left: 119px; width: 125px; margin-top: -3px"
+                style="left: 119px; width: 125px; top: -3px"
               />
               <span class="form-label" style="left: 300px">RIGHT</span>
               <input
                 type="text"
                 class="form-field"
                 value="6/6=NORMAL"
-                style="left: 335px; width: 245px; margin-top: -3px"
+                style="left: 335px; width: 245px; top: -3px"
               />
             </div>
 
@@ -682,41 +693,43 @@
               type="text"
               class="form-field"
               value="NO COVID-19  SYMPTOMS"
-              style="left: 265px; width: 335px"
+              style="left: 265px; width: 335px; top: -5px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0">APPEARANCE</span>
+            <span class="form-label" style="left: 0; top: -5px"
+              >APPEARANCE</span
+            >
             <input
               type="text"
               class="form-field"
               value="NORMAL"
-              style="left: 265px; width: 335px"
+              style="left: 265px; width: 335px; top: -10px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0"
+            <span class="form-label" style="left: 0; top: -12px"
               >IF SUFFERING FROM ANY CHRONIC DISEASES</span
             >
             <input
               type="text"
               class="form-field"
               value="NIL"
-              style="left: 265px; width: 335px"
+              style="left: 265px; width: 335px; top: -15px"
             />
           </div>
 
           <div class="form-row">
-            <span class="form-label" style="left: 0"
+            <span class="form-label" style="left: 0; top: -20px"
               >ADDITIONAL COMMENTS IF ANY</span
             >
             <input
               type="text"
               class="form-field"
               value="FIT FOR WORK"
-              style="left: 265px; width: 335px"
+              style="left: 265px; width: 335px; top: -20px"
             />
           </div>
         </div>
@@ -726,7 +739,7 @@
             border: 1px solid black;
             text-align: center;
             padding: 3px;
-            margin-top: 0px;
+            margin-top: -10px;
             font-size: 11px;
             font-weight: 600;
             color: #3c3b3b;
@@ -753,7 +766,7 @@
           <img
             src="./images/logo-signature.png"
             alt="Logo Signature"
-            class="signature-img"
+            class="logo-signature-img"
           />
           <div>
             <p style="font-size: 13px; color: #000000e3; font-weight: bold">
@@ -786,10 +799,10 @@
           </p>
         </div>
       </div>
-      <button id="download-btn" class="download-btn" onclick="downloadPDF()">
-        Download PDF
-      </button>
     </div>
+    <button id="download-btn" class="download-btn" onclick="downloadPDF()">
+      Download PDF
+    </button>
 
     <script>
       // Set all input elements to read-only
