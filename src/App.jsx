@@ -593,12 +593,12 @@ function App() {
           <div className="footer">
             <hr />
             <p className="arabic">
-              س.ت ٣٠٣٠٠٢٨٨٨٨ - ٢٠٠٠ ص.ب ٢٨٧ - الجبيل ٣١٩٥١ - المملكة العربية
-              السعودية +٩٦٦ ١٣ ٣٣٢ - +٩٦٦ ١٣ ٣٣٢ ١٨٨٨
+              س.ت ٢٠٥٥٠٢٣٨٤٨ - ص.ب ٢٨٧ - الجبيل ٣١٩٥١ - المملكة العربية
+              السعودية - تلفون : +٩٦٦ ١٣ ٣٦٣ ١٨٨٨ - +٩٦٦ ١٣ ٣٦٣ ٢٨٨٨
             </p>
             <p className="contact">
               C.R. 2055023848 - Tel.: +966 13 363 1888 - +966 13 363 2888 - P.O.
-              Box 284 Jubail 31951 - Kingdom of Saudi Arabia
+              Box 287 Jubail 31951 - Kingdom of Saudi Arabia
             </p>
             <p className="email">
               E-mail: info@jubailmedicare.com - Website: www.jubailmedicare.com
