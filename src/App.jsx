@@ -88,7 +88,7 @@ function App() {
 
         <div className="content">
           <div className="logo-section">
-            <img src="/images/logo.png" alt="Jubail Medicare Logo" />
+            <img src="/images/logo2.png" alt="Jubail Medicare Logo" />
           </div>
 
           <div className="header-section">
@@ -440,6 +440,7 @@ function App() {
                   style={{ left: 335, width: 245, top: -3 }}
                 />
               </div>
+
 
               <div className="vision-row" style={{ marginTop: 30 }}>
                 <span className="form-label" style={{ left: 90 }}>
