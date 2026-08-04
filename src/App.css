@@ -193,11 +193,18 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
+ 
+ 
 }
 
 .signature-img {
-  height: 135px;
-  transform: rotate(10deg);
+  height: 125px;
+  transform: rotate(0deg);
+  
+}
+
+.logo-signature-img {
+  height: 155px;
 }
 
 .footer {

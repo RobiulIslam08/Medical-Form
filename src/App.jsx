@@ -100,7 +100,7 @@ function App() {
               <hr className="header-hr" />
             </div>
             <div className="qr-section">
-              <img src="/images/qr-scan.png" alt="QR Code" className="qr-code" />
+              <img src="/images/qr-scan2.png" alt="QR Code" className="qr-code" />
               <p className="qr-label">
                 Scan QR to Verify
                 <br />
@@ -366,7 +366,7 @@ function App() {
             </div>
 
             <div className="form-row">
-              <span className="form-label" style={{ left: 0, top: -18 }}>
+              <span className="form-label" style={{ left: 0, top: -19 }}>
                 NEUROLOGICAL
               </span>
               <input
@@ -374,18 +374,18 @@ function App() {
                 className="form-field"
                 readOnly
                 defaultValue="NORMAL"
-                style={{ left: 155, width: 445, top: -10 }}
+                style={{ left: 155, width: 445, top: -19 }}
               />
             </div>
 
-            <div className="form-row" style={{ top: 0 }}>
+            <div className="form-row" style={{ top: -5 }}>
               <span className="form-label" style={{ left: 0 }}>
                 VISION
               </span>
               <span
                 style={{
                   position: "absolute",
-                  left: 119,
+                  left: 139,
                   width: 125,
                   textAlign: "center",
                   fontSize: 11,
@@ -411,7 +411,7 @@ function App() {
             </div>
 
             <div className="vision-section">
-              <div className="vision-row" style={{ top: -5 }}>
+              <div className="vision-row" style={{ top: -10 }}>
                 <span className="form-label" style={{ left: 35 }}>
                   NEAR
                 </span>
@@ -437,7 +437,7 @@ function App() {
                 />
               </div>
 
-              <div className="vision-row">
+              <div className="vision-row" style={{ top: -10 }}>
                 <span className="form-label" style={{ left: 40 }}>
                   FAR
                 </span>
@@ -478,11 +478,11 @@ function App() {
               </div>
             </div>
 
-            <div className="form-row" style={{ marginTop: 20, height: 22 }}>
-              <span className="form-label" style={{ left: 0 , top: -15}}>
+            <div className="form-row" style={{ marginTop: 15, height: 22 }}>
+              <span className="form-label" style={{ left: 0 , top: -10}}>
                 HEARING
               </span>
-              <span className="form-label" style={{ left: 110 ,top: 1.5}}>
+              <span className="form-label" style={{ left: 110 ,top: 4}}>
                 LEFT
               </span>
               <input
@@ -492,7 +492,7 @@ function App() {
                 defaultValue="NORMAL"
                 style={{ left: 139, width: 125 }}
               />
-              <span className="form-label" style={{ left: 320 ,top: 1.5}}>
+              <span className="form-label" style={{ left: 320 ,top: 4}}>
                 RIGHT
               </span>
               <input
@@ -504,7 +504,7 @@ function App() {
               />
             </div>
 
-            <div className="form-row" style={{ marginTop: 15 }}>
+            <div className="form-row" style={{ marginTop: 20 }}>
               <span className="form-label" style={{ left: 0 }}>
                 GENERAL HEAL TH CONDITION
               </span>
@@ -572,7 +572,7 @@ function App() {
               border: "1px solid black",
               textAlign: "center",
               padding: 3,
-              marginTop: -10,
+              marginTop: -20,
               fontSize: 11,
               fontWeight: 600,
               color: "#3c3b3b",
@@ -589,21 +589,23 @@ function App() {
                   fontSize: 13,
                   color: "#000000e3",
                   fontWeight: "bold",
+                  marginLeft: -10,
                 }}
               >
                 DR. SHAHID HUSSAIN ( )
               </p>
-              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500 }}>
+              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500,marginLeft: -10, marginTop:5 }}>
                 ATTENDING PHYSICIAN
               </p>
               <img
-                src="/images/shahed.png"
+              style={{marginLeft: -40}}
+                src="/images/shahed2.png"
                 alt="Signature 1"
                 className="signature-img"
               />
             </div>
             <img
-              src="/images/logo-signature.png"
+              src="/images/logo-signature2.png"
               alt="Logo Signature"
               className="logo-signature-img"
             />
@@ -613,16 +615,19 @@ function App() {
                   fontSize: 13,
                   color: "#000000e3",
                   fontWeight: "bold",
+                  textAlign:"right",
+                  marginRight: -10
                 }}
               >
-                DR. SAEED ABDUL KHALIQ ( )
+                DR. SAEED ABDUL KHALIQ
               </p>
-              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500 }}>
+              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500, marginTop:5, textAlign:"right", marginRight: -10 }}>
                 MEDICAL DERECTOR
               </p>
               <p></p>
               <img
-                src="/images/saeed.png"
+               style={{marginRight: -40}}
+                src="/images/saeed2.png"
                 alt="Signature 2"
                 className="signature-img"
               />
