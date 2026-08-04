@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import html2pdf from "html2pdf.js/dist/html2pdf.bundle.min.js";
 
-const WATERMARK_COUNT = 21;
+const WATERMARK_COUNT = 19;
 
 function App() {
   const formRef = useRef(null);
@@ -88,7 +88,7 @@ function App() {
 
         <div className="content">
           <div className="logo-section">
-            <img src="/images/logo2.png" alt="Jubail Medicare Logo" />
+            <img src="/images/logo.png" alt="Jubail Medicare Logo" />
           </div>
 
           <div className="header-section">
@@ -478,11 +478,11 @@ function App() {
               </div>
             </div>
 
-            <div className="form-row" style={{ marginTop: 15, height: 22 }}>
+            <div className="form-row" style={{ marginTop: 10, height: 22 }}>
               <span className="form-label" style={{ left: 0 , top: -10}}>
                 HEARING
               </span>
-              <span className="form-label" style={{ left: 110 ,top: 4}}>
+              <span className="form-label" style={{ left: 110 ,}}>
                 LEFT
               </span>
               <input
@@ -492,7 +492,7 @@ function App() {
                 defaultValue="NORMAL"
                 style={{ left: 139, width: 125 }}
               />
-              <span className="form-label" style={{ left: 320 ,top: 4}}>
+              <span className="form-label" style={{ left: 320 ,}}>
                 RIGHT
               </span>
               <input
@@ -594,11 +594,11 @@ function App() {
               >
                 DR. SHAHID HUSSAIN ( )
               </p>
-              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500,marginLeft: -10, marginTop:5 }}>
+              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500,marginLeft: -10, }}>
                 ATTENDING PHYSICIAN
               </p>
               <img
-              style={{marginLeft: -40}}
+              style={{marginLeft: 0}}
                 src="/images/shahed2.png"
                 alt="Signature 1"
                 className="signature-img"
@@ -621,15 +621,15 @@ function App() {
               >
                 DR. SAEED ABDUL KHALIQ
               </p>
-              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500, marginTop:5, textAlign:"right", marginRight: -10 }}>
+              <p style={{ fontSize: 13, color: "#3c3b3b", fontWeight: 500,  textAlign:"right", marginRight: -10 }}>
                 MEDICAL DERECTOR
               </p>
-              <p></p>
+              
               <img
-               style={{marginRight: -40}}
                 src="/images/saeed2.png"
                 alt="Signature 2"
-                className="signature-img"
+                className="signature-img saeed-signature"
+                style={{ transform: "translateX(30px)" }}
               />
             </div>
           </div>
