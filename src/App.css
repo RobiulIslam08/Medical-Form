@@ -92,7 +92,7 @@ body {
   text-align: center;
   flex-grow: 1;
   line-height: 12px;
-  color: #131313ea;
+  color: #131313c5;
 }
 
 .header-hr {
@@ -142,7 +142,8 @@ body {
   font-weight: 700;
   margin-bottom: 5px;
   text-decoration: underline;
-  color: #131313;
+  text-underline-offset: 2px;
+  color: #131313c9;
 }
 
 .form-row {
@@ -173,6 +174,7 @@ body {
 
 .vision-section {
   margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 .vision-row {

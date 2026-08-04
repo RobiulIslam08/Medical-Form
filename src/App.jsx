@@ -374,7 +374,7 @@ function App() {
                 className="form-field"
                 readOnly
                 defaultValue="NORMAL"
-                style={{ left: 155, width: 445, top: -20 }}
+                style={{ left: 155, width: 445, top: -10 }}
               />
             </div>
 
@@ -476,32 +476,35 @@ function App() {
                   WITHOUT GLASSES
                 </span>
               </div>
-
-              <div className="vision-row" style={{ marginTop: 30 }}>
-                <span className="form-label" style={{ left: 90 }}>
-                  LEFT
-                </span>
-                <input
-                  type="text"
-                  className="form-field"
-                  readOnly
-                  defaultValue="6/6=NORMAL"
-                  style={{ left: 119, width: 125 }}
-                />
-                <span className="form-label" style={{ left: 300 }}>
-                  RIGHT
-                </span>
-                <input
-                  type="text"
-                  className="form-field"
-                  readOnly
-                  defaultValue="6/6=NORMAL"
-                  style={{ left: 335, width: 245 }}
-                />
-              </div>
             </div>
 
-            <div className="form-row" style={{ marginTop: 25 }}>
+            <div className="form-row" style={{ marginTop: 20, height: 22 }}>
+              <span className="form-label" style={{ left: 0 , top: -15}}>
+                HEARING
+              </span>
+              <span className="form-label" style={{ left: 110 ,top: 1.5}}>
+                LEFT
+              </span>
+              <input
+                type="text"
+                className="form-field"
+                readOnly
+                defaultValue="NORMAL"
+                style={{ left: 139, width: 125 }}
+              />
+              <span className="form-label" style={{ left: 320 ,top: 1.5}}>
+                RIGHT
+              </span>
+              <input
+                type="text"
+                className="form-field"
+                readOnly
+                defaultValue="NORMAL"
+                style={{ left: 355, width: 245 }}
+              />
+            </div>
+
+            <div className="form-row" style={{ marginTop: 15 }}>
               <span className="form-label" style={{ left: 0 }}>
                 GENERAL HEAL TH CONDITION
               </span>
