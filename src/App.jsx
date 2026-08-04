@@ -126,7 +126,7 @@ function App() {
               type="text"
               className="form-field"
               readOnly
-              defaultValue="20/02/2025 04:48 PM"
+              defaultValue="02/08/2026 01:25 PM"
               style={{ left: 440, width: 160 }}
             />
           </div>
@@ -140,7 +140,7 @@ function App() {
               className="form-field"
               readOnly
               style={{ left: 60, width: 110 }}
-              defaultValue="13875255"
+              defaultValue="1319161"
             />
             <span className="form-label" style={{ left: 200 }}>
               CATEGORY
@@ -160,7 +160,7 @@ function App() {
               className="form-field"
               readOnly
               style={{ left: 500, width: 100 }}
-              defaultValue="A+VE"
+              defaultValue="AB +VE"
             />
           </div>
 
@@ -175,7 +175,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="BILLAL HOSSAIN"
+                defaultValue="MD SAIFUL ISLAM ."
                 style={{ left: 100, width: 500 }}
               />
             </div>
@@ -198,7 +198,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="35 YRS"
+                defaultValue="28 YRS"
                 style={{ left: 310, width: 176, top: -5 }}
               />
               <span className="form-label" style={{ left: 490, top: -3 }}>
@@ -222,7 +222,7 @@ function App() {
                 className="form-field"
                 readOnly
                 style={{ left: 200, width: 110, top: -10 }}
-                defaultValue="2597566708"
+                defaultValue="2516716343"
               />
               <span className="form-label" style={{ left: 315, top: -6 }}>
                 DATE OF BIRTH
@@ -231,7 +231,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="01/01/1990"
+                defaultValue="22/06/1998"
                 style={{ left: 487, width: 113, top: -10 }}
               />
             </div>
@@ -250,7 +250,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="ACROSS THE DESERTS SAUDI EST."
+                defaultValue="QUSSAI ABDUL MOHSEN ABU JAWHAR CONT.EST."
                 style={{ left: 185, width: 415 }}
               />
             </div>
@@ -291,7 +291,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="165cm"
+                defaultValue="160 cm"
                 style={{ left: 155, width: 80 }}
               />
               <span className="form-label" style={{ left: 280 }}>
@@ -301,7 +301,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="72 kg"
+                defaultValue="68 kg"
                 style={{ left: 325, width: 140 }}
               />
             </div>
@@ -314,7 +314,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="76 b/min"
+                defaultValue="72 b/min"
                 style={{ left: 155, width: 80, top: -5 }}
               />
               <span className="form-label" style={{ left: 305, top: -3 }}>
@@ -324,7 +324,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="180/20 mmHg"
+                defaultValue="110/70 mmHg"
                 style={{ left: 325, width: 140, top: -5 }}
               />
               <span className="form-label" style={{ left: 485, top: -3 }}>
@@ -512,7 +512,7 @@ function App() {
                 type="text"
                 className="form-field"
                 readOnly
-                defaultValue="NO COUGH-NO FEVER-NO BREATHING DEFFICULTY"
+                defaultValue="NO COUGH-NO FEVER-NO BREATHING DIFFICULTY"
                 style={{ left: 265, width: 335 }}
               />
             </div>
@@ -579,7 +579,7 @@ function App() {
               width: 600,
             }}
           >
-            NOTE: THIS MEDICAL FITNESS REPORT IS VALID TILL 19/02/2026
+            NOTE: THIS MEDICAL FITNESS REPORT IS VALID TILL 01/08/2027
           </div>
 
           <div className="signature-section">
