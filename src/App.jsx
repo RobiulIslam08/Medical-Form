@@ -378,14 +378,29 @@ function App() {
               />
             </div>
 
-            <div className="form-row" style={{ top: -10 }}>
+            <div className="form-row" style={{ top: 0 }}>
               <span className="form-label" style={{ left: 0 }}>
                 VISION
               </span>
               <span
                 style={{
                   position: "absolute",
-                  left: 180,
+                  left: 119,
+                  width: 125,
+                  textAlign: "center",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: "#3c3b3b",
+                }}
+              >
+                N6 = NORMAL
+              </span>
+              <span
+                style={{
+                  position: "absolute",
+                  left: 335,
+                  width: 245,
+                  textAlign: "center",
                   fontSize: 11,
                   fontWeight: 600,
                   color: "#3c3b3b",
@@ -424,7 +439,7 @@ function App() {
 
               <div className="vision-row">
                 <span className="form-label" style={{ left: 40 }}>
-                  EAR
+                  FAR
                 </span>
                 <span className="form-label" style={{ left: 90 }}>
                   LEFT
@@ -446,8 +461,21 @@ function App() {
                   defaultValue="6/6=NORMAL"
                   style={{ left: 335, width: 245, top: -3 }}
                 />
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 335,
+                    width: 245,
+                    top: 18,
+                    textAlign: "center",
+                    fontSize: 11,
+                    fontWeight: 600,
+                    color: "#3c3b3b",
+                  }}
+                >
+                  WITHOUT GLASSES
+                </span>
               </div>
-
 
               <div className="vision-row" style={{ marginTop: 30 }}>
                 <span className="form-label" style={{ left: 90 }}>
