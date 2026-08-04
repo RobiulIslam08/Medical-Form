@@ -99,7 +99,14 @@ function App() {
               </h1>
               <hr className="header-hr" />
             </div>
-            <img src="/images/qr-scan.png" alt="QR Code" className="qr-code" />
+            <div className="qr-section">
+              <img src="/images/qr-scan.png" alt="QR Code" className="qr-code" />
+              <p className="qr-label">
+                Scan QR to Verify
+                <br />
+                Authenticity
+              </p>
+            </div>
           </div>
 
           <div className="form-row">
